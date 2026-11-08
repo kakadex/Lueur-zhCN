@@ -1,6 +1,7 @@
 # How to apply this to your Lueur 1.4.0
 
-Two files are new, four are edited. Nothing else changes.
+One file is new (`Locales/zhCN.lua`), seven are edited (5 locale files, `Lueur.toc`,
+`Nodes.lua`) — 22 changed lines in total. Nothing else changes.
 
 ## 0. Apply the diff
 
@@ -13,11 +14,11 @@ Then copy `patch/Locales/zhCN.lua` into `Locales/`.
 **Use `-c core.autocrlf=false`.** The Lua sources are pure LF and this patch is
 generated as LF. With `core.autocrlf=true` (the Windows default) git rewrites the
 whole file to CRLF as it applies the patch, and every line shows as modified. The
-content is fine, but the diff becomes noise and `git diff --stat` shows 350 changed
-lines instead of 7. Verified both ways: with `core.autocrlf=false` the result is
-byte-identical to the build this patch came from.
+content is fine, but the diff becomes noise and `git diff --stat` shows several hundred
+changed lines instead of the 22 real ones. Verified both ways: with
+`core.autocrlf=false` the result is byte-identical to the build this patch came from.
 
-If you prefer to apply by hand, the four edits are below.
+If you prefer to apply by hand, the edits are below.
 
 ## 1. New file: `Locales/zhCN.lua`
 

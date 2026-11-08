@@ -28,7 +28,7 @@ copy of the addon.
 | Path | What it is |
 |---|---|
 | `patch/Locales/zhCN.lua` | The new locale file. 292 keys, one per key in `enUS.lua`. |
-| `patch/Lueur-1.4.1-zhCN.patch` | Minimal unified diff against upstream 1.4.0 — 23 changed lines total. |
+| `patch/Lueur-1.4.1-zhCN.patch` | Minimal unified diff against upstream 1.4.0 — 22 changed lines total (16 added, 6 removed) across 7 files. |
 | `patch/APPLY.md` | How to apply it by hand, step by step. |
 | `给原作者的说明.md` | The note to the author, in English. |
 | `NOTICE.md` | Provenance, translation derivation, and license status. |
@@ -37,7 +37,8 @@ copy of the addon.
 
 ## What the patch actually changes
 
-Six files, 23 changed lines, no logic touched:
+The patch touches **7 existing files** in **22 changed lines** (16 added, 6 removed), and adds
+one new file (`Locales/zhCN.lua`). No logic is touched:
 
 | File | Change |
 |---|---|
