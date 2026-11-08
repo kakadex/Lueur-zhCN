@@ -1,0 +1,8 @@
+# Keep line endings exactly as authored: the Lua sources are LF and stay LF.
+* text=auto eol=lf
+
+*.lua   text eol=lf
+*.toc   text eol=lf
+*.patch text eol=lf
+*.md    text eol=lf
+*.py    text eol=lf

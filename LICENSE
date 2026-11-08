@@ -1,0 +1,61 @@
+Lueur Simplified Chinese localization
+Copyright (c) 2026 Lueur zhCN contributors
+
+--------------------------------------------------------------------------------
+About the original addon
+--------------------------------------------------------------------------------
+
+Lueur was created by Armytille and is published on CurseForge:
+
+    https://www.curseforge.com/wow/addons/lueur
+    CurseForge project ID 1732324
+
+As of the 1.4.0 release (2026-10-21), the upstream project states no license:
+
+  - the CurseForge "license" field is empty;
+  - the distributed 1.4.0 archive contains no LICENSE or README file;
+  - Lueur.toc carries no Author or license field;
+  - no source comments mention a license.
+
+This file is therefore NOT a grant of rights over Armytille's work, and it does
+not restate or reinterpret theirs. Under ordinary copyright rules, code with no
+declared license is "all rights reserved". If you want to reuse, redistribute or
+build on Lueur itself, ask the author.
+
+--------------------------------------------------------------------------------
+What this license covers
+--------------------------------------------------------------------------------
+
+Everything in this project that is our own work is released under the MIT
+License below. That means, in practice:
+
+  - Locales/zhCN.lua        -- the Simplified Chinese text and command aliases;
+  - the zhCN entries added to Nodes.lua (Simplified Chinese vein names);
+  - the `zh` addition to the language list of deDE, enUS, esES, frFR and ruRU;
+  - the `## Notes-zhCN` and `## Title-zhCN` lines in Lueur.toc;
+  - NOTICE.md, and the documentation in this repository.
+
+It does NOT cover the original addon code, its name, its icon, or the artwork
+under Media/ -- those remain the property of their author.
+
+--------------------------------------------------------------------------------
+MIT License
+--------------------------------------------------------------------------------
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

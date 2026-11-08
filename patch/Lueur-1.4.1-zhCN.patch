@@ -1,0 +1,81 @@
+# Lueur 1.4.1-zhCN — patch against upstream 1.4.0
+#
+# Apply with `git apply` inside your Lueur checkout, or read it by hand:
+# every hunk below is small. Paths are relative to the addon root.
+
+--- a/Locales/deDE.lua
++++ b/Locales/deDE.lua
+@@ -378,5 +378,5 @@
+ 	"/lueur abtasten — zeigt, was das letzte Abtasten der Minikarte gelesen hat und was Lueur daraus gemacht hat",
+ 	"/lueur ignorieren — ignoriert das Objekt, vor dem du stehst, oder hebt das auf; ignorieren liste, ignorieren leeren, ignorieren <Name>",
+-	"/lueur sprache <auto | de | en | es | fr | ru> — Sprache der Texte und Befehle von Lueur",
++	"/lueur sprache <auto | de | en | es | fr | ru | zh> — Sprache der Texte und Befehle von Lueur",
+ 	"/lueur debug — beschreibt jedes anvisierte Objekt und was Lueur daraus schließt",
+ 	"/lueur ziele — listet die Questziele auf, mit denen Objektnamen verglichen werden",
+--- a/Locales/enUS.lua
++++ b/Locales/enUS.lua
+@@ -378,5 +378,5 @@
+ 	"/lueur scan — shows what the last scan of the minimap read, and what Lueur made of it",
+ 	"/lueur ignore — ignores the object you are facing, or stops ignoring it; ignore list, ignore clear, ignore <name>",
+-	"/lueur language <auto | de | en | es | fr | ru> — language of Lueur's texts and commands",
++	"/lueur language <auto | de | en | es | fr | ru | zh> — language of Lueur's texts and commands",
+ 	"/lueur debug — describes each object targeted and what Lueur makes of it",
+ 	"/lueur objectives — lists the quest objectives that object names are compared to",
+--- a/Locales/esES.lua
++++ b/Locales/esES.lua
+@@ -379,5 +379,5 @@
+ 	"/lueur barrido — muestra lo que leyó el último barrido del minimapa, y lo que Lueur hizo con ello",
+ 	"/lueur ignorar — ignora el objeto que tienes delante, o deja de ignorarlo; ignorar lista, ignorar vaciar, ignorar <nombre>",
+-	"/lueur idioma <auto | de | en | es | fr | ru> — idioma de los textos y comandos de Lueur",
++	"/lueur idioma <auto | de | en | es | fr | ru | zh> — idioma de los textos y comandos de Lueur",
+ 	"/lueur debug — describe cada objeto apuntado y lo que Lueur deduce de él",
+ 	"/lueur objetivos — enumera los objetivos de misión con los que se comparan los nombres de objeto",
+--- a/Locales/frFR.lua
++++ b/Locales/frFR.lua
+@@ -378,5 +378,5 @@
+ 	"/lueur balayage — affiche ce que le dernier balayage de la minimap a lu, et ce que Lueur en a fait",
+ 	"/lueur ignorer — ignore l'objet qui se trouve devant toi, ou cesse de l'ignorer ; ignorer liste, ignorer vider, ignorer <nom>",
+-	"/lueur langue <auto | de | en | es | fr | ru> — langue des textes et des commandes de Lueur",
++	"/lueur langue <auto | de | en | es | fr | ru | zh> — langue des textes et des commandes de Lueur",
+ 	"/lueur debug — décrit chaque objet ciblé et ce que Lueur en déduit",
+ 	"/lueur objectifs — liste les objectifs de quête auxquels le nom des objets est comparé",
+--- a/Locales/ruRU.lua
++++ b/Locales/ruRU.lua
+@@ -373,5 +373,5 @@
+ 	"/lueur scan - показывает данные последнего сканирования миникарты и то, как Lueur их обработал",
+ 	"/lueur ignore - добавляет объект перед вами в список игнорирования или удаляет его оттуда; варианты: ignore list, ignore clear, ignore <name>",
+-	"/lueur language <auto | de | en | es | fr | ru> - язык текстов и команд аддона Lueur",
++	"/lueur language <auto | de | en | es | fr | ru | zh> - язык текстов и команд аддона Lueur",
+ 	"/lueur debug - выводит описание каждого выбранного объекта и то, как Lueur его обрабатывает",
+ 	"/lueur objectives - выводит список задач квестов, с названиями которых сравниваются объекты",
+--- a/Lueur.toc
++++ b/Lueur.toc
+@@ -7,5 +7,7 @@
+ ## Notes-esMX: Hace brillar los filones, las hierbas, los objetos de misión y los cofres cuando te acercas, con varios efectos de luz a elegir, y muestra hierbas y filones en el minimapa con su propio icono (usa el soft targeting de Blizzard).
+ ## Notes-ruRU: Подсвечивает рудные жилы, травы, квестовые объекты и сундуки при приближении к ним, с выбором световых эффектов, и показывает травы и жилы на миникарте их собственными иконками (использует soft targeting от Blizzard).
+-## Version: 1.4.0
++## Notes-zhCN: 在你靠近时让矿脉、草药、任务物体、宝箱和鱼漂发出光芒，可选多种光效，并把草药与矿脉以小地图专属图标显示（使用暴雪的软瞄准）。敲 /lueur 打开设置，敲 /lueur help 看全部命令。命令都能用中文，例如 /lueur 开、/lueur 关、/lueur 范围 15、/lueur 预览。检测距离最远 15 码，这是游戏客户端的上限，超过 15 码游戏就不再选中物体，光晕也不会出现。
++## Title-zhCN: Lueur
++## Version: 1.4.1
+ ## IconTexture: Interface\AddOns\Lueur\Media\icon.tga
+ ## AddonCompartmentFunc: Lueur_OnAddonCompartmentClick
+@@ -19,4 +21,5 @@
+ Locales\esES.lua
+ Locales\ruRU.lua
++Locales\zhCN.lua
+ Effects.lua
+ Lueur.lua
+--- a/Nodes.lua
++++ b/Nodes.lua
+@@ -102,4 +102,11 @@
+ 		darkiron = "Залежи черного железа", thorium = "Малая ториевая жила", richthorium = "Богатая ториевая жила",
+ 	},
++	-- 简体中文矿脉名（依《魔兽世界》怀旧服简体中文名）
++	zhCN = {
++		copper = "铜矿脉", tin = "锡矿脉", incendicite = "焚化矿脉", silver = "银矿脉",
++		bloodstone = "次级血石矿藏", iron = "铁矿脉", indurium = "因迪里姆矿脉",
++		gold = "金矿脉", mithril = "秘银矿藏", truesilver = "真银矿藏",
++		darkiron = "黑铁矿藏", thorium = "瑟银矿脉", richthorium = "富瑟银矿脉",
++	},
+ }
+ local SAME_AS = { enGB = "enUS", esMX = "esES" }
