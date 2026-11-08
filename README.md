@@ -14,6 +14,7 @@ copy of the addon.
 这是魔兽世界插件 **Lueur** 的简体中文补丁，**作者未声明许可证**，所以这个仓库只放我方新增的内容和最小改动差异，**不复制作者的原始代码与美术资源**。
 
 - 插件作者是 **Armytille**，本仓库与他无隶属关系；
+- 本版简体中文汉化由 **骑人知福-正直** 整理（GitHub 账号 `kakadex`）；
 - `Lueur.lua` **一个字没改**，与官方 1.4.0 逐字节相同；
 - 中文文本派生自 NGA 论坛流传的 Lueur 0.7.0 汉化版（原译者未署名），**不是原创翻译**；
 - 这个仓库的目的是把改动整理好交给作者，**公开发布或再分发前应先取得作者许可**。
@@ -32,7 +33,7 @@ copy of the addon.
 | `给原作者的说明.md` | The note to the author, in English. |
 | `NOTICE.md` | Provenance, translation derivation, and license status. |
 | `docs/改动说明.md` | What changed and how it was verified (Chinese). |
-| `tools/` | The two static checkers used to validate the locale file. |
+| `tools/` | The three static checkers used to validate the locale file and the local-variable budget. |
 
 ## What the patch actually changes
 
@@ -87,6 +88,8 @@ Static checks only — there is no Lua interpreter on the machine that produced 
 
 | Check | Result |
 |---|---|
+| `patch/Lueur-1.4.1-zhCN.patch` on a pristine 1.4.0 | `git apply --check` and the real apply both exit 0 |
+| Result of that apply vs. the build this came from | 31 files, **every one byte-identical** (SHA256) |
 | Key parity with `enUS.lua` | 292 keys, no missing, no extra, no duplicates |
 | Format placeholders (`%s`, `%d`, `%%`) | 290 single-line strings, counts and order match |
 | Help list length | 30 lines on both sides |
@@ -110,10 +113,11 @@ The measurement is written up in [`给原作者的说明.md`](给原作者的说
 ## Credits
 
 - Original addon, code, name, icon and artwork: **Armytille**.
-- Simplified Chinese translation: derived from a community 0.7.0 localization
-  circulated on the NGA forum, **translator uncredited** in that archive — see
-  `NOTICE.md` for the measured overlap. Attribution for the Chinese text belongs to
-  that translator first.
+- Simplified Chinese localization: compiled by **骑人知福-正直** (GitHub
+  [`kakadex`](https://github.com/kakadex)), derived from a community 0.7.0
+  localization circulated on the NGA forum, **translator uncredited** in that
+  archive — see `NOTICE.md` for the measured overlap. Attribution for the
+  underlying Chinese text belongs to that translator first.
 - World of Warcraft and related assets are property of Blizzard Entertainment.
 
 Addons for World of Warcraft must be distributed free of charge under Blizzard's UI

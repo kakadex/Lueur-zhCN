@@ -1,6 +1,8 @@
 -- Lueur：简体中文文本
 -- Lueur 显示的中文。简体中文（zhCN）客户端会自动用它；其他语言没有的条目回退显示英文。
 --
+-- 简体中文汉化：骑人知福-正直
+--
 -- 版权与来源（详见插件根目录 NOTICE.md 与 LICENSE）：
 --   原始插件 Lueur 的作者是 Armytille（https://www.curseforge.com/wow/addons/lueur）。
 --   截至官方 1.4.0，上游未声明任何许可证（CurseForge 的 license 字段为空、官方包内

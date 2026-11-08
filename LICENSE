@@ -1,5 +1,5 @@
 Lueur Simplified Chinese localization
-Copyright (c) 2026 Lueur zhCN contributors
+Copyright (c) 2026 骑人知福-正直 (GitHub: kakadex)
 
 --------------------------------------------------------------------------------
 About the original addon
@@ -27,7 +27,8 @@ What this license covers
 --------------------------------------------------------------------------------
 
 Everything in this project that is our own work is released under the MIT
-License below. That means, in practice:
+License below. "Our own work" is the Simplified Chinese localization by
+骑人知福-正直, and it means, in practice:
 
   - Locales/zhCN.lua        -- the Simplified Chinese text and command aliases;
   - the zhCN entries added to Nodes.lua (Simplified Chinese vein names);
